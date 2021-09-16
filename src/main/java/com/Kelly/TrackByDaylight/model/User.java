@@ -38,7 +38,7 @@ public class User{
     @Size(max = 120)
     private String password;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Role role;
 
     public User(String username, String email, String password){
