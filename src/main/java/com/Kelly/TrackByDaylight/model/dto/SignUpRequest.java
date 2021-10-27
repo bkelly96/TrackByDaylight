@@ -1,15 +1,18 @@
 package com.Kelly.TrackByDaylight.model.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Set;
 
-@Data
+@Data @AllArgsConstructor @NoArgsConstructor
 public class SignUpRequest {
 
+    //validators
     @NotBlank
     @Size(min = 3, max = 20)
     private String username;

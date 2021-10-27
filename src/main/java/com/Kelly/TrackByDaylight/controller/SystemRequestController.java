@@ -23,4 +23,10 @@ public class SystemRequestController {
 
     //Create another get method since this one isn't working.
 
+    @PostMapping("/match")
+    public ResponseEntity createMatch(@RequestBody Match match){
+        requestService.createMatch(match);
+        return new ResponseEntity(CREATED);
+    }
+
 }
